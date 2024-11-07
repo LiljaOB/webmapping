@@ -136,4 +136,4 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-GDAL_LIBRARY_PATH=r'C:\Users\lilja\miniconda3\envs\attempt\Library\bin\gdal.dll'
+
