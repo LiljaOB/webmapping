@@ -2,26 +2,30 @@
 
 {% block title %}Country Info {% endblock %}
 {% block content %}
-<h1>Information for {{ country }}</h1>
-    <ul>
-        <li><strong>Region:</strong> {{ region }}</li>
-        <li><strong>Population:</strong> {{ population }}</li>
-        <li><strong>Area:</strong> {{ area }} sq km</li>
-        <li><strong>Population Density:</strong> {{ popDensity }} per sq km</li>
-        <li><strong>Coastline:</strong> {{ coastline }}</li>
-        <li><strong>Migration:</strong> {{ migration }}</li>
-        <li><strong>Infant Mortality:</strong> {{ infantMort }}</li>
-        <li><strong>GDP:</strong> {{ gdp }}</li>
-        <li><strong>Literacy Rate:</strong> {{ literacy }}%</li>
-        <li><strong>Phones per 1000:</strong> {{ phones }}</li>
-        <li><strong>Arable Land:</strong> {{ arable }}%</li>
-        <li><strong>Crops:</strong> {{ crops }}%</li>
-        <li><strong>Other Land:</strong> {{ other }}%</li>
-        <li><strong>Climate:</strong> {{ climate }}</li>
-        <li><strong>Birthrate:</strong> {{ birthrate }}</li>
-        <li><strong>Deathrate:</strong> {{ deathrate }}</li>
-        <li><strong>Agriculture:</strong> {{ agriculture }}%</li>
-        <li><strong>Industry:</strong> {{ industry }}%</li>
-        <li><strong>Service:</strong> {{ service }}%</li>
-    </ul>
+{% if country %}
+	<h1>Information for {{ country }}</h1>
+    	<ul>
+        	<li><strong>Region:</strong> {{ region }}</li>
+        	<li><strong>Population:</strong> {{ population }}</li>
+        	<li><strong>Area:</strong> {{ area }} sq km</li>
+        	<li><strong>Population Density:</strong> {{ popDensity }} per sq km</li>
+        	<li><strong>Coastline:</strong> {{ coastline }}</li>
+        	<li><strong>Migration:</strong> {{ migration }}</li>
+        	<li><strong>Infant Mortality:</strong> {{ infantMort }}</li>
+        	<li><strong>GDP:</strong> {{ gdp }}</li>
+        	<li><strong>Literacy Rate:</strong> {{ literacy }}%</li>
+        	<li><strong>Phones per 1000:</strong> {{ phones }}</li>
+        	<li><strong>Arable Land:</strong> {{ arable }}%</li>
+        	<li><strong>Crops:</strong> {{ crops }}%</li>
+        	<li><strong>Other Land:</strong> {{ other }}%</li>
+        	<li><strong>Climate:</strong> {{ climate }}</li>
+        	<li><strong>Birthrate:</strong> {{ birthrate }}</li>
+        	<li><strong>Deathrate:</strong> {{ deathrate }}</li>
+        	<li><strong>Agriculture:</strong> {{ agriculture }}%</li>
+        	<li><strong>Industry:</strong> {{ industry }}%</li>
+        	<li><strong>Service:</strong> {{ service }}%</li>
+    	</ul>
+{% else %}
+    <p>No country information available.</p>
+{% endif %}
 {% endblock%}
